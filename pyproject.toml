@@ -17,13 +17,13 @@ dependencies = [
 ]
 
 [project.scripts]
-main = "ohclink_api.cli:main"
+app = "ohclink_api.cli:main"
 
 [tool.poetry]
 packages = [{include = "ohclink_api", from = "src"}]
 
 [tool.poetry.scripts]
-main = "ohclink_api.cli:main"
+app = "ohclink_api.cli:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
