@@ -1,0 +1,29 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base, sessionmaker
+
+from ohclink_api.settings import get_settings
+from ohclink_api.utils.get_database_url import get_database_url
+
+settings = get_settings()
+
+engine = create_engine(
+    get_database_url(
+        user=settings.db_user,
+        password=settings.db_password,
+        host=settings.db_host,
+        port=settings.db_port,
+        db_name=settings.db_name,
+    ),
+    isolation_level="REPEATABLE READ"
+)
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+
+def get_session():
+    session = SessionLocal()
+    try:
+        yield session
+    finally:
+        session.close()

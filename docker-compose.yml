@@ -1,0 +1,16 @@
+version: '3'
+
+volumes:
+  ohclink_db_data:
+
+services:
+  db:
+    image: postgres:17.7
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: sangsu
+      POSTGRES_PASSWORD: sangsu
+      POSTGRES_DB: ohclink
+    volumes:
+      - ohclink_db_data:/var/lib/postgresql/data
