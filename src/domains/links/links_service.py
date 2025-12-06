@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from db.models import Link
+from src.db.models import Link
 
 def get_original_link(db: Session, pathname: str):
     link = db.query(Link).where(Link.pathname == pathname).first()

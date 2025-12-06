@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from domains.links import links_router
+from src.domains.links import links_router
 
 app = FastAPI()
 

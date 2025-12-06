@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from db.database import get_session
-from domains.links import links_service
+from src.db.database import get_session
+from src.domains.links import links_service
 
 router = APIRouter()
 
