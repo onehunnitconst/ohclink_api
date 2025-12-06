@@ -7,13 +7,7 @@ from ohclink_api.utils.get_database_url import get_database_url
 settings = get_settings()
 
 engine = create_engine(
-    get_database_url(
-        user=settings.db_user,
-        password=settings.db_password,
-        host=settings.db_host,
-        port=settings.db_port,
-        db_name=settings.db_name,
-    ),
+    url=settings.database_url,
     isolation_level="REPEATABLE READ"
 )
 
