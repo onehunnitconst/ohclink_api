@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from ohclink_api.settings import get_settings
-from ohclink_api.utils.get_database_url import get_database_url
+from settings import get_settings
+from utils.get_database_url import get_database_url
 
 settings = get_settings()
 

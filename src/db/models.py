@@ -3,7 +3,7 @@ from typing import Optional
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 
-from ohclink_api.db.database import Base
+from db.database import Base
 
 class Link(Base):
     __tablename__ = "ol_links"

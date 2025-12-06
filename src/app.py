@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from ohclink_api.domains.links import links_router
+from domains.links import links_router
 
 app = FastAPI()
 
