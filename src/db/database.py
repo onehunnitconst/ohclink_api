@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from settings import get_settings
+from src.settings import get_settings
 from src.utils.get_database_url import get_database_url
 
 settings = get_settings()
